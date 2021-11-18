@@ -1,0 +1,101 @@
+// The designs were created to the following widths:
+// - Mobile: 375px
+// - Desktop: 1440px
+
+// ### Primary
+// - Very dark blue (main background): hsl(233, 47%, 7%)
+// - Dark desaturated blue (card background): hsl(244, 38%, 16%)
+// - Soft violet (accent): hsl(277, 64%, 61%)
+// ### Neutral
+// - White (main heading, stats): hsl(0, 0%, 100%)
+// - Slightly transparent white (main paragraph): hsla(0, 0%, 100%, 0.75)
+// - Slightly transparent white (stat headings): hsla(0, 0%, 100%, 0.6)
+
+// ### Body Copy
+// - Font size: 15px
+// ### Font
+// - Family: [Inter](https://fonts.google.com/specimen/Inter)
+// - Weights: 400, 700
+
+// - Family: [Lexend Deca](https://fonts.google.com/specimen/Lexend+Deca)
+// - Weights: 400\
+
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+html {
+  height: 100%;
+}
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: hsl(233, 47%, 7%);
+}
+.top-text {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  color: hsl(0, 0%, 100%);
+}
+.mid-text {
+  color: hsla(0, 0%, 100%, 0.75);
+}
+.prpl-text {
+  font-family: "Inter", sans-serif;
+  color: hsl(277, 64%, 61%);
+}
+.stats-text {
+  color: hsla(0, 0%, 100%, 0.6);
+}
+.stats-num {
+  font-family: "Inter", sans-serif;
+  color: hsl(0, 0%, 100%);
+  font-weight: 700;
+}
+.card-image {
+  border-radius: 0 10px 10px 0;
+}
+.column {
+  flex: 50%;
+}
+.my-card {
+  background-color: hsl(244, 38%, 16%);
+  border-radius: 10px 0 0 10px;
+  .my-card-left {
+    padding-left: 4.5rem;
+    padding-right: 3.5rem;
+  }
+}
+.fit-cover {
+  object-fit: cover;
+}
+.image-with-overlay {
+  height: 100%;
+  position: relative;
+  &:after {
+    content: "";
+    background-color: darken(hsl(277, 64%, 61%), 25);
+    opacity: 0.6;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 0 10px 10px 0; //only added so that purple overlay is rounded
+  }
+}
+
+@media only screen and (max-width: 680px) {
+  .image-with-overlay {
+    border-radius: unset;
+  }
+  .my-card-left {
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .image-with-overlay {
+    border-radius: unset;
+  }
+  .my-card .my-card-left {
+    padding: 2rem 2rem 3.5rem 2rem;
+  }
+}

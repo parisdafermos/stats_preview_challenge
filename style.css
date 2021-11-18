@@ -1,0 +1,97 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;700&family=Lexend+Deca&display=swap");
+html {
+  height: 100%;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  font-family: "Lexend Deca", sans-serif;
+  background-color: #090b1a;
+}
+
+.top-text {
+  font-family: "Lexend Deca", sans-serif;
+  font-weight: 700;
+  color: white;
+}
+
+.mid-text {
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.prpl-text {
+  font-family: "Inter", sans-serif;
+  color: #aa5cdb;
+}
+
+.stats-text {
+  color: rgba(255, 255, 255, 0.6);
+}
+
+.stats-num {
+  font-family: "Inter", sans-serif;
+  color: white;
+  font-weight: 700;
+}
+
+.card-image {
+  border-radius: 0 10px 10px 0;
+}
+
+.column {
+  -webkit-box-flex: 50%;
+      -ms-flex: 50%;
+          flex: 50%;
+}
+
+.my-card {
+  background-color: #1b1938;
+  border-radius: 10px 0 0 10px;
+}
+
+.my-card .my-card-left {
+  padding-left: 4.5rem;
+  padding-right: 3.5rem;
+}
+
+.fit-cover {
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.image-with-overlay {
+  height: 100%;
+  position: relative;
+}
+
+.image-with-overlay:after {
+  content: "";
+  background-color: #6a2197;
+  opacity: 0.6;
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 0 10px 10px 0;
+}
+
+@media only screen and (max-width: 680px) {
+  .image-with-overlay {
+    border-radius: unset;
+  }
+  .my-card-left {
+    padding-left: 2.5rem;
+    padding-right: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 1200px) {
+  .image-with-overlay {
+    border-radius: unset;
+  }
+  .my-card .my-card-left {
+    padding: 2rem 2rem 3.5rem 2rem;
+  }
+}
+/*# sourceMappingURL=style.css.map */
